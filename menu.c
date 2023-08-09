@@ -44,8 +44,10 @@ int ret_data(){
     return num;};
 
 //Prints Student Data searched for with id.
-void print_data_ID(int id, struct Student arr[]){
-
+void print_data_ID(struct Student arr[]){
+    int id;
+    printf("Please Enter ID:\n");
+    scanf("%d", &id);
     while (isValidStudentId(id)) {
         for (int i = 0; i < ARR_SIZE; ++i) {
             if (arr[i].studentID == id) {
@@ -63,11 +65,16 @@ void print_data_ID(int id, struct Student arr[]){
 };
 
 //Prints Student Data searched for with name.
-void print_data_name(char text[], struct Student arr[]){
+void print_data_name(struct Student arr[]){
     int counter = 0;
+    char text[ARR_SIZE];
+    printf("Please Enter Student's name:\n");
+    fflush(stdin);
+    fgets(text, ARR_SIZE, stdin);
+    text[strlen(text) - 1] = 0;
     while (isValidName(text)) {
         for (int i = 0; i < ARR_SIZE; ++i) {
-            if (!strcmp(arr[i].name, text)) {
+            if (strcmp(arr[i].name, text) == 0) {
                 printf("Name: %s\n", arr[i].name);
                 printf("ID: %d\n", arr[i].studentID);
                 printf("Gender: %c\n", arr[i].gender);
