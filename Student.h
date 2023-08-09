@@ -14,7 +14,7 @@ struct Student {
 
 struct Student receive_info(struct Student arr[]);
 void add_student(struct Student arr[], struct Student s);
-void remove_student(struct Student arr[], int id);
+void remove_student(struct Student arr[]);
 
 
 

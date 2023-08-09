@@ -13,34 +13,19 @@ int main() {
             {"Youssef Kassab",1000000,'M',2023,3.03},
             {"Rogeh Hany",2310386,'M',2023,3.3}};
 
-    int oper;
+    print_menu();
+    int oper = choose_operation();
 
+    if (oper == 1){
+        struct  Student s = receive_info(students);
+        add_student(students, s);
+    }
+    else if (oper == 2){
+        remove_student(students);
+    }
+    else if (oper == 3){
 
-
-
-    struct Student s_new = {"Ali Gabr",1000004,'M',2023,2.32};
-
-
-    print_data_name("Youssef kassab hello", students);
-
-
-
-
-
-
-    /*print_menu();
-    oper = choose_operation();
-
-     switch (oper){
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
-    };
+    }
 
 
 
@@ -51,6 +36,7 @@ int main() {
 
 
 
-*/
+
+
     return 0;
 }

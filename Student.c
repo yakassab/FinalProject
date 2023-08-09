@@ -8,6 +8,7 @@ struct Student receive_info(struct Student arr[]){
 
     printf("Please Enter Student Name:\n");
     do {
+        fflush(stdin);
         fgets(s.name, ARR_SIZE, stdin);
     } while (!isValidName(s.name));
 
@@ -31,16 +32,23 @@ struct Student receive_info(struct Student arr[]){
     do {
         scanf("%lf", &s.GPA);
     } while (!isValidGPA(s.GPA));
-
     return s;
 };
 
 // Adds Student to first empty index in array.
 void add_student(struct Student arr[], struct Student s){
-    for (int i = 0; i < ARR_SIZE; ++i) {if (arr[i].name[0] == '\0') {arr[i] = s;}}};
+    for (int i = 0; i < ARR_SIZE; ++i) {
+        if (arr[i].name[0] == '\0') {
+            arr[i] = s;
+            printf("Student %s Added Successfully to index %d in Student Array\n", arr[i].name, i);
+            break;
+        }}};
 
 // Removes student from array according to ID.
-void remove_student(struct Student arr[], int id){
+void remove_student(struct Student arr[]){
+    int id;
+    printf("Please Enter Desired student ID to be removed.\n");
+    scanf("%d", &id);
     if(isValidStudentId(id)){
         for (int i = 0; i < ARR_SIZE; ++i) {
             if (arr[i].studentID == id){
@@ -49,11 +57,11 @@ void remove_student(struct Student arr[], int id){
                 arr[i].gender = '\0';
                 arr[i].academicYear = 0;
                 arr[i].GPA = 0;
-                printf("Student with ID %d Removed Successfully", id);
+                printf("Student with ID %d Removed Successfully\n", id);
                 return;
             }
         }
-        printf("ID Not found within Records");
+        printf("ID Not found within Records\n");
         return;
     }};
 
