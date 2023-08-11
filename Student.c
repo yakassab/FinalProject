@@ -65,3 +65,18 @@ void remove_student(struct Student arr[]){
         return;
     }};
 
+//Changes Students GPA using their ID.
+void update_GPA(int id, double gpa, struct Student arr[]){
+    for (int i = 0; i < ARR_SIZE; ++i) {
+        if (arr[i].studentID == id) {
+            arr[i].GPA = gpa;
+            return;}}};
+
+//Changes Students Year using their ID.
+void update_year(int id, int year, struct Student arr[]){
+    for (int i = 0; i < ARR_SIZE; ++i) {
+        if (arr[i].studentID == id){
+            arr[i].academicYear = year;
+            return;}}};
+
+

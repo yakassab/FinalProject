@@ -92,3 +92,34 @@ void print_data_name(struct Student arr[]){
         }
     }
 };
+
+//Updates Student Data
+void update_data(struct Student arr[]){
+    int id, oper, year, gpa;
+    printf("Please Enter Student ID:\n");
+    fflush(stdin);
+    scanf("%d", &id);
+    if (isValidStudentId(id)){
+        printf("Which Data would you like to update:\n");
+        printf("\t1- Academic Year.\n");
+        printf("\t2-Student GPA.\n");
+        fflush(stdin);
+        scanf("%d", &oper);
+        if (oper == 1){
+            printf("Please Enter new Academic Year:\n");
+            do {
+                scanf("%d", &year);
+            } while (!isValidYear(year));
+            update_year(id, year, arr);
+            return;
+        } else if (oper == 2){
+            printf("Please Enter new Student GPA:\n");
+            do {
+                scanf("%d", &gpa);
+            } while (!isValidGPA(gpa));
+            update_GPA(id, gpa, arr);
+            return;
+        }
+    };
+};
+
