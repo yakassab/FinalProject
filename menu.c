@@ -93,7 +93,7 @@ void print_data_name(struct Student arr[]){
     }
 };
 
-//Updates Student Data
+//Updates Student Data.
 void update_data(struct Student arr[]){
     int id, oper, year, gpa;
     printf("Please Enter Student ID:\n");
@@ -122,4 +122,15 @@ void update_data(struct Student arr[]){
         }
     };
 };
+
+//Keeps or breaks main loop.
+int start_over(int num){
+    printf("Choose one of the following:\n");
+    printf("\t1-Return to Main Menu.\n");
+    printf("\t2-End Program.\n");
+    scanf("%d", &num);
+    if (num == 2){num = 0;};
+    return num;
+};
+
 

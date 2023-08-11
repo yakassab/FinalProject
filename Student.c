@@ -1,5 +1,6 @@
 #include "Student.h"
 #include "checks.h"
+#include "string.h"
 #include <stdio.h>
 
 // Recieves data for student struct.
@@ -10,6 +11,7 @@ struct Student receive_info(struct Student arr[]){
     do {
         fflush(stdin);
         fgets(s.name, ARR_SIZE, stdin);
+        s.name[strlen(s.name) - 1] = 0;
     } while (!isValidName(s.name));
 
     printf("Please Enter Student ID:\n");

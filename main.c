@@ -19,32 +19,47 @@ int main() {
             {"nora mohamed",2114569,'F',2004,3.99},
             {"mohamed hossam",2542542,'M',2023,2.44}};
 
-    print_menu();
-    int oper = choose_operation();
+    int keep = 1;
+
+    while (keep) {
+
+        print_menu();
+        int oper = choose_operation();
 
 //  ADDING STUDENT:
-    if (oper == 1){
-        struct  Student s = receive_info(students);
-        add_student(students, s);}
+        if (oper == 1) {
+            struct Student s = receive_info(students);
+            add_student(students, s);
+            keep = start_over(keep);
+        }
 
 //  REMOVING STUDENT:
-    else if (oper == 2){
-        remove_student(students);}
+        else if (oper == 2) {
+            remove_student(students);
+            keep = start_over(keep);
+
+        }
 
 //  RETRIEVING DATA:
-    else if (oper == 3){
-        int num = ret_data();
-        if (num == 1){
-            print_data_ID(students);
-        } else if (num == 2){
-            print_data_name(students);}
+        else if (oper == 3) {
+            int num = ret_data();
+            if (num == 1) {
+                print_data_ID(students);
+            } else if (num == 2) {
+                print_data_name(students);
+            }
+            keep = start_over(keep);
+
 
 //  UPDATING DATA:
-    } else if (oper == 4){
-        update_data(students);}
+        } else if (oper == 4) {
+            update_data(students);
+            keep = start_over(keep);
+
+        }
 
 
-
+    }
 
 
 
