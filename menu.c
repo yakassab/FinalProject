@@ -25,7 +25,7 @@ int choose_operation(){
     int num;
     scanf("%d", &num);
     while (!(num >= 1 && num <= 4)){
-        printf("Invalid\n");
+        printf("Invalid Number, Please Try Again.\n");
         scanf("%d", &num);};
     return num;
 
@@ -125,7 +125,7 @@ void update_data(struct Student arr[]){
 
 //Keeps or breaks main loop.
 int start_over(int num){
-    printf("Choose one of the following:\n");
+    printf("\nChoose one of the following:\n");
     printf("\t1-Return to Main Menu.\n");
     printf("\t2-End Program.\n");
     scanf("%d", &num);

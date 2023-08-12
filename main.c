@@ -5,7 +5,6 @@
 #include "Student.h"
 
 
-
 int main() {
 
     struct Student students[ARR_SIZE] = {
@@ -37,7 +36,6 @@ int main() {
         else if (oper == 2) {
             remove_student(students);
             keep = start_over(keep);
-
         }
 
 //  RETRIEVING DATA:
@@ -49,14 +47,21 @@ int main() {
                 print_data_name(students);
             }
             keep = start_over(keep);
-
+        }
 
 //  UPDATING DATA:
-        } else if (oper == 4) {
+        else if (oper == 4) {
             update_data(students);
             keep = start_over(keep);
-
         }
+
+        
+
+
+
+
+
+
 
 
     }
