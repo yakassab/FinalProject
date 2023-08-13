@@ -7,27 +7,28 @@
 const char* STU_FORMAT_IN = "(%[^,],%d,%c,%d,%lf)";
 const char* STU_FORMAT_OUT = "(%s,%d,%c,%d,%lf)";
 
-
-
 int main() {
 
+//Creating Array of Students.
     struct Student students[ARR_SIZE];
 
+//Reading previously saved data to array.
     FILE* file = fopen("students.txt", "r+");
     for (int i = 0; i < ARR_SIZE; ++i) {fscanf(file, STU_FORMAT_IN, students[i].name,
                 &students[i].studentID, &students[i].gender, &students[i].academicYear, &students[i].GPA);}
     fclose(file);
 
 
-
-
-
     int keep = 1;
 
+
+//Main Loop:
     while (keep) {
 
+//  MENU AND OPERATION:
         print_menu();
         int oper = choose_operation();
+
 //  ADDING STUDENT:
         if (oper == 1) {
             struct Student s = receive_info(students);
@@ -62,7 +63,7 @@ int main() {
     }
 
 
-
+//Saving modified array to text file for future use.
     FILE* fpw = fopen("students.txt", "w+");
     for (int i = 0; i < ARR_SIZE; i++) {
         if(isValidName_c(students[i].name)&&(students[i].name[0]!='\0')) {
