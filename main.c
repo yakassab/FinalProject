@@ -4,9 +4,6 @@
 #include "globals.h"
 #include "Student.h"
 
-const char* STU_FORMAT_IN = "(%[^,],%d,%c,%d,%lf)";
-const char* STU_FORMAT_OUT = "(%s,%d,%c,%d,%lf)";
-
 int main() {
 
 //Creating Array of Students.
@@ -22,7 +19,7 @@ int main() {
     int keep = 1;
 
 
-//Main Loop:
+//MAIN LOOP:
     while (keep) {
 
 //  MENU AND OPERATION:
