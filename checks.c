@@ -1,6 +1,7 @@
 #include "checks.h"
 #include "stdio.h"
 #include "globals.h"
+#include "ctype.h"
 
 // Checks for Name Validity.
 int isValidName(char name[]){
@@ -8,6 +9,18 @@ int isValidName(char name[]){
     for (int i = 0; i < ARR_SIZE; ++i) {if (name[i] == ' '){counter++;}}
     if (counter != 1){
         printf("Invalid Name\n");
+        return 0;
+    } else {return 1;}};
+
+//Different version of previous function but modified for other use in terminating program.
+int isValidName_c(char name[]){
+    int counter = 0;
+    for (int i = 0; name[i] != '\0'; ++i) {
+        if (name[i] == ' '){counter++; continue;}
+        if (!isalpha(name[i])){return 0;}
+    }
+
+    if (counter != 1){
         return 0;
     } else {return 1;}};
 

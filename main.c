@@ -14,7 +14,8 @@ int main() {
     struct Student students[ARR_SIZE];
 
     FILE* file = fopen("students.txt", "r+");
-    for (int i = 0; i < sizeof(file); ++i) {fscanf(file, STU_FORMAT_IN, students[i].name, &students[i].studentID, &students[i].gender, &students[i].academicYear, &students[i].GPA);}
+    for (int i = 0; i < ARR_SIZE; ++i) {fscanf(file, STU_FORMAT_IN, students[i].name,
+                &students[i].studentID, &students[i].gender, &students[i].academicYear, &students[i].GPA);}
     fclose(file);
 
 
@@ -62,7 +63,14 @@ int main() {
 
 
 
-
+    FILE* fpw = fopen("students.txt", "w+");
+    for (int i = 0; i < ARR_SIZE; i++) {
+        if(isValidName_c(students[i].name)&&(students[i].name[0]!='\0')) {
+            fprintf(fpw, STU_FORMAT_OUT, students[i].name, students[i].studentID,
+                    students[i].gender,students[i].academicYear, students[i].GPA);
+        }
+    }
+    fclose(fpw);
 
 
 
