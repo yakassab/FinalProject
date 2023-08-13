@@ -4,19 +4,22 @@
 #include "globals.h"
 #include "Student.h"
 
+const char* STU_FORMAT_IN = "(%[^,],%d,%c,%d,%lf)";
+const char* STU_FORMAT_OUT = "(%s,%d,%c,%d,%lf)";
+
+
 
 int main() {
 
-    struct Student students[ARR_SIZE] = {
-            {"seif khuelif",2211009,'M',2023,4},
-            {"ahmed ayman",1000001,'M',2023,3.53},
-            {"youssef kassab",1000000,'M',2023,3.03},
-            {"rogeh hany",2310386,'M',2023,3.3},
-            {"ahmed ayman",1000055,'M',2020,1.23},
-            {"ahmed sobhy",2539475,'M',1995,3.7},
-            {"omar ahmed",1710796,'M',2010,3.4},
-            {"nora mohamed",2114569,'F',2004,3.99},
-            {"mohamed hossam",2542542,'M',2023,2.44}};
+    struct Student students[ARR_SIZE];
+
+    FILE* file = fopen("students.txt", "r+");
+    for (int i = 0; i < sizeof(file); ++i) {fscanf(file, STU_FORMAT_IN, students[i].name, &students[i].studentID, &students[i].gender, &students[i].academicYear, &students[i].GPA);}
+    fclose(file);
+
+
+
+
 
     int keep = 1;
 
@@ -24,7 +27,6 @@ int main() {
 
         print_menu();
         int oper = choose_operation();
-
 //  ADDING STUDENT:
         if (oper == 1) {
             struct Student s = receive_info(students);
@@ -54,14 +56,6 @@ int main() {
             update_data(students);
             keep = start_over(keep);
         }
-
-        
-
-
-
-
-
-
 
 
     }

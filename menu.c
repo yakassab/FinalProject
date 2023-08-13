@@ -95,7 +95,8 @@ void print_data_name(struct Student arr[]){
 
 //Updates Student Data.
 void update_data(struct Student arr[]){
-    int id, oper, year, gpa;
+    int id, oper, year;
+    double gpa;
     printf("Please Enter Student ID:\n");
     fflush(stdin);
     scanf("%d", &id);
@@ -115,7 +116,7 @@ void update_data(struct Student arr[]){
         } else if (oper == 2){
             printf("Please Enter new Student GPA:\n");
             do {
-                scanf("%d", &gpa);
+                scanf("%lf", &gpa);
             } while (!isValidGPA(gpa));
             update_GPA(id, gpa, arr);
             return;
