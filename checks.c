@@ -29,7 +29,7 @@ int isValidName_c(char name[]){
 int isValidStudentId(int id) {
     // Check if the student ID is 7 digits long.
     if (id < 1000000 || id > 9999999) {
-        printf("Invalid ID, Not 7 digits long\n");
+        printf("Invalid ID, Has to be 7 digits long without any leading zeros.\n");
         return 0;}
 
     return 1;}
