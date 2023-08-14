@@ -16,6 +16,7 @@ int isValidName(char name[]){
 int isValidName_c(char name[]){
     int counter = 0;
     for (int i = 0; name[i] != '\0'; ++i) {
+        if (name[0] == ' '){return 0;}
         if (name[i] == ' '){counter++; continue;}
         if (!isalpha(name[i])){return 0;}
     }
@@ -40,7 +41,6 @@ int isNotTakenID(int id, struct Student arr[]){
             printf("ID Already exists\n");
             return 0;}}
     return 1;};
-
 
 //Checks for gender validity.
 int isValidGender(char c){

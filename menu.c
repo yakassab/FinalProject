@@ -12,10 +12,10 @@ void print_menu(){
     printf("/********************************************/ \n");
 
     printf("Choose Your operation: \n\n");
-    printf("\t1- Add a new student\n");
-    printf("\t2- Remove a student\n");
-    printf("\t3- Retrieve student's data\n");
-    printf("\t4- Update student's data\n");
+    printf("\t1- Add a new student.\n");
+    printf("\t2- Remove a student.\n");
+    printf("\t3- Retrieve student's data.\n");
+    printf("\t4- Update student's data.\n");
 
 };
 
