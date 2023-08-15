@@ -16,6 +16,7 @@ void print_menu(){
     printf("\t2- Remove a student.\n");
     printf("\t3- Retrieve student's data.\n");
     printf("\t4- Update student's data.\n");
+    printf("\t5- Show Records of all Students.\n");
 
 };
 
@@ -24,7 +25,7 @@ void print_menu(){
 int choose_operation(){
     int num;
     scanf("%d", &num);
-    while (!(num >= 1 && num <= 4)){
+    while (!(num >= 1 && num <= 5)){
         printf("Invalid Number, Please Try Again.\n");
         scanf("%d", &num);};
     return num;
@@ -85,11 +86,21 @@ void print_data_name(struct Student arr[]){
             }
         }
         if(counter == 0){
-            printf("Student with name %s not found", text);
+            printf("Student with name %s not found\n", text);
             return;
         } else if (counter >= 1){
             return;
         }
+    }
+};
+
+void print_data(struct Student arr[], int i){
+    if(isValidName_c(arr[i].name)) {
+        printf("Name: %s\n", arr[i].name);
+        printf("ID: %d\n", arr[i].studentID);
+        printf("Gender: %c\n", arr[i].gender);
+        printf("Year: %d \n", arr[i].academicYear);
+        printf("GPA: %lf \n\n\n", arr[i].GPA);
     }
 };
 

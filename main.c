@@ -56,6 +56,12 @@ int main() {
             keep = start_over(keep);
         }
 
+//  PRINTING FULL RECORDS:
+        else if (oper == 5){
+            for (int i = 0; i < ARR_SIZE; ++i) {print_data(students, i);}
+            keep = start_over(keep);
+
+        }
 
     }
 
