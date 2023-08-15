@@ -14,7 +14,11 @@ View a list of all student
 How to Use
 To use the student management system, you will need to have a C compiler installed on your computer.
 
-OR excutable file can be found in the cmake build folder.
+
+--------------------------------------------------------------
+OR excutable file can be found in the cmake-build-debug folder.
+--------------------------------------------------------------
+
 
 Credits
 This project was created by Youssef Ayman Kassab 21p0010.
