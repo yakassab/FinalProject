@@ -102,7 +102,7 @@ void update_data(struct Student arr[]){
     scanf("%d", &id);
     if (isValidStudentId(id)){
         printf("Which Data would you like to update:\n");
-        printf("\t1- Academic Year.\n");
+        printf("\t1-Academic Year.\n");
         printf("\t2-Student GPA.\n");
         fflush(stdin);
         scanf("%d", &oper);

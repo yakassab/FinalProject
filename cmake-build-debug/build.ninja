@@ -73,12 +73,6 @@ build CMakeFiles/FinalProject.dir/Student.c.obj: C_COMPILER__FinalProject_Debug 
   OBJECT_DIR = CMakeFiles\FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles\FinalProject.dir
 
-build CMakeFiles/FinalProject.dir/stats.c.obj: C_COMPILER__FinalProject_Debug M$:/Clion/Projects/FinalProject/stats.c || cmake_object_order_depends_target_FinalProject
-  DEP_FILE = CMakeFiles\FinalProject.dir\stats.c.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu11
-  OBJECT_DIR = CMakeFiles\FinalProject.dir
-  OBJECT_FILE_DIR = CMakeFiles\FinalProject.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target FinalProject
@@ -87,7 +81,7 @@ build CMakeFiles/FinalProject.dir/stats.c.obj: C_COMPILER__FinalProject_Debug M$
 #############################################
 # Link the executable FinalProject.exe
 
-build FinalProject.exe: C_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalProject.dir/main.c.obj CMakeFiles/FinalProject.dir/menu.c.obj CMakeFiles/FinalProject.dir/checks.c.obj CMakeFiles/FinalProject.dir/Student.c.obj CMakeFiles/FinalProject.dir/stats.c.obj
+build FinalProject.exe: C_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalProject.dir/main.c.obj CMakeFiles/FinalProject.dir/menu.c.obj CMakeFiles/FinalProject.dir/checks.c.obj CMakeFiles/FinalProject.dir/Student.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FinalProject.dir

@@ -3,4 +3,4 @@ project(FinalProject C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(FinalProject main.c menu.c checks.h checks.c globals.h Student.h Student.c stats.c stats.h)
+add_executable(FinalProject main.c menu.c menu.h checks.h checks.c globals.h Student.h Student.c)
