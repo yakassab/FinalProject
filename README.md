@@ -1,6 +1,6 @@
 # FinalProject
 Can be found on github by the following link:
-[git@github.com:youssef2977/FinalProject.git](https://github.com/youssef2977/FinalProject.git)
+[git@github.com:yakassab/FinalProject.git](https://github.com/yakassab/FinalProject.git)
 
 Student Management System
 This is a simple console-based (CLI) student management system made in C. It allows users to add, modify, delete, and view student information.
